@@ -1,0 +1,20 @@
+#results {
+}
+
+#results-food {
+	background-color: lightsalmon;
+	width:33%;
+	display:inline-block;
+}
+
+#results-fun {
+	background-color: lightskyblue;
+	width:33%;
+	display:inline-block;
+}
+
+#results-sleep {
+	background-color: lightyellow;
+	width:33%;
+	display:inline-block;
+}

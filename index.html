@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Trip It!</title>
+    <meta name="description" content="A way to plan the basics of the trip using the Yelp API.">
+    <meta name="author" content="Shay and Row" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link href="https://necolas.github.io/normalize.css/4.1.1/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div id="header">
+		<h1>Trip It!</h1>
+		<form id="location-form">
+			<input id="location-input" type="text" /> 
+			<button id="location-submit" type="submit">Let's go!</button>
+		</form>
+	</div>
+
+	<div id="results">
+		<div id="results-food">
+			<dl class="result destination">
+			<dt>Name</dt>
+				<dd class="destination-name"><a href="" target="_blank"></a></dd>
+			<dt>Categories</dt>
+				<dd class="destination-categories"></dd>
+			<dt>Rating</dt>
+				<dd class="destination-rating"></dd>
+			<dt>Image</dt>
+				<dd class="destination-image"><img src=""></dd>
+		</dl>
+		</div>
+		<div id="results-fun">results fun</div>
+		<div id="results-sleep">results sleep</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
