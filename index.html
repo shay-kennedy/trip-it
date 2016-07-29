@@ -9,26 +9,45 @@
     <link href="https://necolas.github.io/normalize.css/4.1.1/normalize.css" rel="stylesheet" type="text/css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="webfonts/stylesheet.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div id="header">
+	<div id="header-container">
 		<h1>Trip It!</h1>
+		<h4>Powered by <a href="http://www.foursquare.com" target="_blank">Foursquare</a></h4>
 		<form id="location-form">
-			<input name="location" type="text" /> 
+			<input name="location" type="text" placeholder="Type a city name..." /> 
 			<button id="location-submit" type="submit">Let's go!</button>
 		</form>
 	</div>
 <p></p>
-	<div class="container" id="results">
+	<div class="container">
 	  <div class="row">
-	    <div class="col-sm-4" id="results-food">
-	      One of three columns
+	    <div class="col-sm-4 results" id="results-food">
+
+		      <div class="destination">
+		      		<div class="destination-card">
+		      			<div class="card-image"><img src="https://irs0.4sqi.net/img/general/75x75/17951291_ZE0SabAT52OeIibFOwc_kOkPV6FmRb-UcN2SomXyRLo.jpg" /></div>
+		      			<div class="card-info">
+		      				<span class="title"><a href="https://foursquare.com/v/morimoto-napa/4c4369c674ffc9284b2b74cc" target=_blank>Placeholder Place</a></span><span class="rating">9.9</span>
+		      				<p class="category">Sushi Restuarant</p>
+		      				<p class="price">Very Expensive</p>
+		      			</div>
+		      		</div>
+		      		<div class="destination-tip">
+		      			The chef's selection of sushi (and a maki) was excellent.
+		      		</div>
+		      	</div>
+
 	    </div>
-	    <div class="col-sm-4" id="results-fun">
-	      One of three columns
+
+	    <div class="col-sm-4 results" id="results-fun">
+
 	    </div>
-	    <div class="col-sm-4" id="results-hotel">
-	      One of three columns
+
+	    <div class="col-sm-4 results"  id="results-hotel">
+
 	    </div>
 	  </div>
 	</div>

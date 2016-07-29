@@ -1,15 +1,138 @@
-#results .row img { width:50px;
+body {
+	margin:2em 1em;
+}
+
+.hidden {
+	display:none;
+}
+
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+.row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
 }
 
 
+h1 {
+	font-family:'hamburgerheavenregular';
+	font-size:7em;
+	display:block;
+	color:darkred;
+}
+
+h4 {
+	font-family:'oswald';
+	text-transform:uppercase;
+	letter-spacing:0.25em;
+}
+
+form {
+	display:block;
+	margin:2em 0px;
+}
+
+#header-container {
+	text-align:center;
+}
+
+.results {
+	padding:2em 1em;
+	border-radius: 1em;
+}
+
+.results::before {
+	font-size:3em;
+	font-family:oswald;
+	display: block;
+	text-align: center;
+	letter-spacing:0.15em;
+}
+
+#results-food::before {
+	content: 'FOOD';
+}
+
 #results-food {
 	background-color: lightsalmon;
+}
+
+#results-fun::before {
+	content: 'FUN';
 }
 
 #results-fun {
 	background-color: lightskyblue;
 }
 
+#results-hotel::before {
+	content: 'SLEEP';
+}
+
 #results-hotel {
 	background-color: lightyellow;
 }
+
+.destination {
+	margin-top:1.5em;
+}
+
+.destination-card p {
+	margin:0px;
+}
+
+.card-image {
+	display:inline-block;
+	vertical-align:top;
+}
+
+.card-image img {
+	background-color:lightgray;
+	border-radius:0.75em;
+	width:75px;
+}
+
+.card-info {
+	/*background-color:lightyellow;*/
+	display:inline-block;
+}
+
+.destination-tip {
+	/*background-color:lightskyblue;*/
+	margin-top:0.25em;
+}
+
+.destination-tip::before {
+	content: 'User Comment: ';
+	font-weight:bold;
+}
+
+.title {
+	font-size:1.25em;
+	font-weight:bold;
+}
+
+.rating {
+	background-color:green;
+	font-size:1.25em;
+	color:white;
+	padding:0.25em;
+	border-radius:0.25em;
+	margin-left:0.25em;
+}
+
+.category {
+	font-style:italic;
+	font-size:1.1em;
+}
+
+.price::before {
+	content:'Price: ';
+	font-weight:bold;
+}
+
