@@ -1,20 +1,15 @@
-#results {
+#results .row img { width:50px;
 }
+
 
 #results-food {
 	background-color: lightsalmon;
-	width:33%;
-	display:inline-block;
 }
 
 #results-fun {
 	background-color: lightskyblue;
-	width:33%;
-	display:inline-block;
 }
 
-#results-sleep {
+#results-hotel {
 	background-color: lightyellow;
-	width:33%;
-	display:inline-block;
 }

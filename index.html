@@ -3,10 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Trip It!</title>
-    <meta name="description" content="A way to plan the basics of the trip using the Yelp API.">
+    <meta name="description" content="A way to plan the basics of the trip using the Foursquare API.">
     <meta name="author" content="Shay and Row" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link href="https://necolas.github.io/normalize.css/4.1.1/normalize.css" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -17,13 +18,21 @@
 			<button id="location-submit" type="submit">Let's go!</button>
 		</form>
 	</div>
-
-	<div id="results">
-		<div id="results-food">results food <br />
-		</div>
-		<div id="results-fun">results fun</div>
-		<div id="results-sleep">results sleep</div>
+<p></p>
+	<div class="container" id="results">
+	  <div class="row">
+	    <div class="col-sm-4" id="results-food">
+	      One of three columns
+	    </div>
+	    <div class="col-sm-4" id="results-fun">
+	      One of three columns
+	    </div>
+	    <div class="col-sm-4" id="results-hotel">
+	      One of three columns
+	    </div>
+	  </div>
 	</div>
+
 
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="js/app.js"></script>
