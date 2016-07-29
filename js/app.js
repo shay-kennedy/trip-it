@@ -18,34 +18,42 @@ $(document).ready(function() {
 
 		$.getJSON(URL, params, function(data) {
    			 for (var i = 0; i < data.response.groups[0].items.length; i++) {
-   			 	if (data.response.groups[0].items[i].venue.photos.count == 1){
-   			 		// $('#results-' + sectionName).append("<p class='card-image'><img src='" + data.response.groups[0].items[i].venue.photos.groups[0].items[0].prefix + '75x75' + data.response.groups[0].items[i].venue.photos.groups[0].items[0].suffix + "'></p>");
-   			 	}
-   			 	else {
-   			 		// $('#results-' + sectionName).append("<p class='card-image'><img src='" + data.response.groups[0].items[i].venue.categories[0].icon.prefix + '88' + data.response.groups[0].items[i].venue.categories[0].icon.suffix + "'></p>");
- 
-   			 	}
-  
-				// $('#results-' + sectionName).append("<p><a href='https://foursquare.com/v/" + data.response.groups[0].items[i].venue.id + "' target='_blank'>" + data.response.groups[0].items[i].venue.name + "</a></p>");
-		        if (typeof data.response.groups[0].items[i].venue.rating !== "undefined"){
-		        	// $('#results-' + sectionName).append("<p>" + data.response.groups[0].items[i].venue.rating + "</p>");
-		        }
-		       	// $('#results-' + sectionName).append("<p>" + data.response.groups[0].items[i].venue.categories[0].name + "</p>");
-		        if (typeof data.response.groups[0].items[i].venue.price !== "undefined" ) {
-		        	// $('#results-' + sectionName).append("<p>Price: " + data.response.groups[0].items[i].venue.price.message + "</p>")
-		        	;};		       	
-		        if (typeof data.response.groups[0].items[i].tips !== "undefined"){
-		        	// $('#results-' + sectionName).append("<p>" + data.response.groups[0].items[i].tips[0].text + "</p>");
-		        }
+   			 	console.log(data.response.groups[0].items[i].venue.name);
+   			 	var destination = $('#templates div.destination').clone();
+   			 	destination.removeClass('destination');
 
+   			 	destination.find('.title').html(data.response.groups[0].items[i].venue.name);
+// .attr()
+
+	   			 	if (data.response.groups[0].items[i].venue.photos.count == 1){
+	   			 		// $('#results-' + sectionName).append("<p class='card-image'><img src='" + data.response.groups[0].items[i].venue.photos.groups[0].items[0].prefix + '75x75' + data.response.groups[0].items[i].venue.photos.groups[0].items[0].suffix + "'></p>");
+	   			 	}
+	   			 	else {
+	   			 		// $('#results-' + sectionName).append("<p class='card-image'><img src='" + data.response.groups[0].items[i].venue.categories[0].icon.prefix + '88' + data.response.groups[0].items[i].venue.categories[0].icon.suffix + "'></p>");
+	 
+	   			 	}
+	  
+					// $('#results-' + sectionName).append("<p><a href='https://foursquare.com/v/" + data.response.groups[0].items[i].venue.id + "' target='_blank'>" + data.response.groups[0].items[i].venue.name + "</a></p>");
+			        if (typeof data.response.groups[0].items[i].venue.rating !== "undefined"){
+			        	// $('#results-' + sectionName).append("<p>" + data.response.groups[0].items[i].venue.rating + "</p>");
+			        }
+			       	// $('#results-' + sectionName).append("<p>" + data.response.groups[0].items[i].venue.categories[0].name + "</p>");
+			        if (typeof data.response.groups[0].items[i].venue.price !== "undefined" ) {
+			        	// $('#results-' + sectionName).append("<p>Price: " + data.response.groups[0].items[i].venue.price.message + "</p>")
+			        	;};		       	
+			        if (typeof data.response.groups[0].items[i].tips !== "undefined"){
+			        	// $('#results-' + sectionName).append("<p>" + data.response.groups[0].items[i].tips[0].text + "</p>");
+			        }
+			  	$('#results-' + sectionName).append(destination);
 				}
+
 			})
 			};
 
 	$('#location-form').submit(function(e){
 		e.preventDefault();
 		//$('div.container').toggleClass('hidden', true);
-		$('.row div').html('');
+		//$('.row div').html('');
 		var userInput = $('#location-form input').val();
 		getRequest(userInput, 'food');
 		getRequest(userInput, 'fun');
