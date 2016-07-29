@@ -66,8 +66,8 @@ button {
 .results::before {
 	font-size:3em;
 	font-family:'oswald';
-	display: block;
-	text-align: center;
+	display: table-cell;
+	text-align:center;
 	letter-spacing:0.15em;
 }
 
