@@ -126,13 +126,8 @@ button {
 	display:inline-block;
 }
 
-.destination-tip {
+.tip {
 	margin-top:0.25em;
-}
-
-.destination-tip::before {
-	content: 'User Comment: ';
-	font-weight:bold;
 }
 
 .title {
@@ -159,10 +154,6 @@ button {
 	font-size:1.1em;
 }
 
-.price::before {
-	content:'Price: ';
-	font-weight:bold;
-}
 
 hr {
 	border: 0;

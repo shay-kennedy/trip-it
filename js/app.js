@@ -42,11 +42,11 @@ $(document).ready(function() {
 		       	// $('#results-' + sectionName).append("<p>" + data.response.groups[0].items[i].venue.categories[0].name + "</p>");
 		        if (typeof data.response.groups[0].items[i].venue.price !== "undefined" ) {
 		        	// $('#results-' + sectionName).append("<p>Price: " + data.response.groups[0].items[i].venue.price.message + "</p>")
-	        		destination.find('.price').text(data.response.groups[0].items[i].venue.price.message);
+	        		destination.find('.price').html('<b>Price:</b> ' + data.response.groups[0].items[i].venue.price.message);
 	        	}		       	
 		        if (typeof data.response.groups[0].items[i].tips !== "undefined"){
 		        	// $('#results-' + sectionName).append("<p>" + data.response.groups[0].items[i].tips[0].text + "</p>");
-		        	destination.find('.destination-tip').text(data.response.groups[0].items[i].tips[0].text);
+		        	destination.find('.tip').html('<b>User Comment:</b> ' + data.response.groups[0].items[i].tips[0].text);
 		        }
 			  	$('#results-' + sectionName).append(destination);
 				}
